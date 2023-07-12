@@ -15,12 +15,20 @@ function getUser(uid) { //KRAZY function
 router.get("/", (req, res, next) => {
     let session = req.session
     if (session.userid) {
-        res.render('home.ejs', { logInCount: 
-            db[getUser(session.userid)]['signInCount']})
+        userKey = getUser(session.userid)
+        res.render('home.ejs', { 
+            logInCount: db[userKey]['signInCount'],
+            clientUser: db[userKey]['username']
+        })
     } else {
         res.redirect('/login')
     }
         
+})
+
+router.get('/logout', (req, res) => {
+    req.session.destroy
+    res.redirect('/login')
 })
 
 module.exports = router;

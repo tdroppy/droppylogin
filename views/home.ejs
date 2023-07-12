@@ -7,7 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>1</h1>
+    <h1>Welcome <%=clientUser%>.</h1>
     <h2>You have logged in <%=logInCount%> times.</h2>
+    <form action="/logout">
+        <button>logout</button>
+    </form>
 </body>
 </html>
