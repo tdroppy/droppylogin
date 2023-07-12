@@ -1,17 +1,26 @@
 const express = require('express')
 const router = express.Router()
-const sessions = require('express-session')
-const cookieParser = require('cookie-parser')
+const fs = require('fs')
 const oneDay = 1000 * 60 * 60 * 24
+const db = require('../db.json')
 
-router.get("/", (req, res) => {
+function getUser(uid) { //KRAZY function
+    for (let i = 0; i < db.length; i++) {
+        if (db[i]['username'] === uid) {
+            return i //searches for user and returns db key
+        }
+    }
+}
+
+router.get("/", (req, res, next) => {
     let session = req.session
-    if (session.userid) { //checks browser for userId, if none redirects to login page test
-        console.log(session.userid)
-        res.render('home.ejs')
+    if (session.userid) {
+        res.render('home.ejs', { logInCount: 
+            db[getUser(session.userid)]['signInCount']})
     } else {
         res.redirect('/login')
     }
+        
 })
 
 module.exports = router;

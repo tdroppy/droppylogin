@@ -1,7 +1,12 @@
 [
-    {
-        "username": "dog",
-        "password": "dog2",
-        "testVariable": "dog test"
-    }
+  {
+    "username": "dog",
+    "password": "dog2",
+    "signInCount": 4
+  },
+  {
+    "username": "cat",
+    "password": "cat2",
+    "signInCount": 1
+  }
 ]
