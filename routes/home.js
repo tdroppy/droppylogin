@@ -7,6 +7,7 @@ const oneDay = 1000 * 60 * 60 * 24
 router.get("/", (req, res) => {
     let session = req.session
     if (session.userid) { //checks browser for userId, if none redirects to login page test
+        console.log(session.userid)
         res.render('home.ejs')
     } else {
         res.redirect('/login')

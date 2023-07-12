@@ -2,21 +2,31 @@ const express = require('express')
 const router = express.Router()
 const sessions = require('express-session')
 const cookieParser = require('cookie-parser')
-
-const NAME = 'dog' //only storing these on here temporary use (ik this is a BAD idea)
-const PASS = 'dog2'
+const db = require('../db.json')
 
 router.get('/', (req,res) => {
     res.render('login.ejs')
 })
 
 router.post('/', (req,res) => { 
-    if (req.body.username == NAME && req.body.password == PASS) { 
-        session=req.session //pulls/creates cookie from browser????
-        session.userid=req.body.username //sets userid to provided name
-        console.log(session)
-        res.redirect('/') 
+    for (var i = 0; i < db.length; i++) {
+        if (db[i]['username'] == req.body.username) {
+            var dataKey = i
+            var userExists = true
+        }
     }
+
+    if (!userExists) {
+        res.redirect('/login')
+    }
+
+    if (db[dataKey]['password'] === req.body.password) {
+        session=req.session
+        session.userid=db[dataKey]['username']
+        console.log(session)
+        res.redirect('/')
+    }
+
 })
 
 module.exports = router
