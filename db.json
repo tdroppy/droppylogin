@@ -2,11 +2,21 @@
   {
     "username": "dog",
     "password": "dog2",
-    "signInCount": 22
+    "signInCount": 26
   },
   {
     "username": "cat",
     "password": "cat2",
+    "signInCount": 2
+  },
+  {
+    "username": "pop",
+    "password": "d",
     "signInCount": 1
+  },
+  {
+    "username": "d",
+    "password": "d",
+    "signInCount": 0
   }
 ]

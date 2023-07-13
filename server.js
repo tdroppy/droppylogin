@@ -19,7 +19,9 @@ app.use(sessions({ //config sessions //TODO add mongodb store (currently cookies
 
 const homeRouter = require('./routes/home') 
 const loginRouter = require('./routes/login')
+const registerRouter = require('./routes/register')
 
+app.use('/register', registerRouter)
 app.use('/', homeRouter)
 app.use('/login', loginRouter)
 
