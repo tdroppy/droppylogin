@@ -1,8 +1,9 @@
+const env = require('dotenv').config()
+
 const express = require('express')
 const app = express()
 const sessions = require('express-session')
 const cookieParser = require('cookie-parser')
-const env = require('dotenv').config()
 const PORT = 8080
 const oneDay = 1000 * 60 * 60 * 24 //1 day in ms
 

@@ -1,0 +1,107 @@
+:root {
+    --dark-color: #1A1A1A;
+    --main-color: #57acdc;
+}
+
+html {
+    background-color: black;
+}
+
+#wrapper {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: var(--dark-color);
+    padding: 0px;
+    width: 350px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    border: 1px solid white;
+    transition: 300ms;
+    -ms-transform: translateY(50%);
+    transform: translateY(50%);
+}
+
+#wrapper:hover {
+    border: 1px solid var(--main-color)
+}
+
+h1 {
+    padding-top: 30px;
+    text-align: center;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 300ms;
+}
+
+h1:hover {
+    color: var(--main-color);
+}
+
+form {
+    width: 100%;
+}
+
+#textInput {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px;
+}
+
+#username {
+    margin-top: 30px;
+}
+
+input {
+    font-size: medium;
+    text-align: center;
+    display: block;
+    width: 85%;
+    height: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid var(--dark-color);
+    transition: 300ms;
+}
+
+input::placeholder {
+    text-align: center;
+    font-size: small;
+    transition: 400ms;
+}
+
+input:focus{
+    outline: none;
+}
+
+input:hover {
+    border: 2px solid var(--main-color)
+}
+
+input:hover::placeholder {
+    font-size: medium;
+}
+
+button {
+    margin-top: 40px;
+    display: block;
+    width: 125px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    color: white;
+    text-align: center;
+    display: block;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 300ms;
+}
+
+a:hover {
+    color: var(--main-color);
+}

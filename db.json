@@ -18,5 +18,10 @@
     "username": "d",
     "password": "d",
     "signInCount": 0
+  },
+  {
+    "username": "popp",
+    "password": "dog",
+    "signInCount": 1
   }
 ]
