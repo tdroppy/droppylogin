@@ -2,7 +2,7 @@
   {
     "username": "dog",
     "password": "dog2",
-    "signInCount": 26
+    "signInCount": 29
   },
   {
     "username": "cat",
@@ -17,11 +17,35 @@
   {
     "username": "d",
     "password": "d",
-    "signInCount": 0
+    "signInCount": 1
   },
   {
     "username": "popp",
     "password": "dog",
     "signInCount": 1
+  },
+  {
+    "username": "z",
+    "password": "z",
+    "signInCount": 0,
+    "uid": 5
+  },
+  {
+    "username": "z",
+    "password": "z",
+    "signInCount": 0,
+    "uid": 6
+  },
+  {
+    "username": "z",
+    "password": "z",
+    "signInCount": 0,
+    "uid": 7
+  },
+  {
+    "username": "z",
+    "password": "z",
+    "signInCount": 0,
+    "uid": 8
   }
 ]

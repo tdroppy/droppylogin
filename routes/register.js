@@ -17,9 +17,9 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-// idk if i really need a try/catch but its 2 am and subconsciously i feel as if its necessary to continue
     userName = req.body.username
     passWord = req.body.password
+    
     if (getUserExist(userName) > 0) { //TODO: fix this mess :)
         console.log('username already taken')
         res.redirect('/register')
